@@ -1,50 +1,157 @@
-<div class="conteiner">
-  <main>
-    <h1 class="title-card">hola mundo. somos el equipo1</h1>
-  </main>
-</div>
+<section class="welcome-container">
+  <div class="welcome-inner">
+    <div class="welcome-text">
+      <h2 class="welcome-title">Bienvenidos a nuestro proyecto</h2>
+      <p class="welcome-subtitle">Innovación, Creatividad y Excelencia</p>
+      <p class="welcome-description">
+        Somos el Equipo 1, un grupo de desarrolladores apasionados por la
+        tecnología y la innovación. Nuestro proyecto se centra en crear
+        soluciones web modernas y eficientes que transformen la experiencia
+        digital.
+      </p>
+    </div>
+    <div class="about-grid">
+      <div class="team">
+        <p class="terminal-line">$ equipo cargado:</p>
+        <ul class="team-list">
+          <li>Angeles Meyli Tea Martínez</li>
+          <li>Javier Alexis Sánchez Espinosa</li>
+          <li>Amy Estephania Carrizales Castillo</li>
+          <li>Ivan Asdrubal Villegas Espinosa</li>
+        </ul>
+      </div>
+    </div>
 
-<style>
-  .title-card {
-    font-size: 30px!;
-    font-style: italic;
-    font-family:
-      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    text-shadow: 30px;
-  }
+    <style>
+      .welcome-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 2rem auto;
+        max-width: 1200px;
+      }
+      .welcome-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+      }
+      .welcome-text {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .welcome-title {
+        font-size: 2.5rem;
+        color: #00ff9c;
+        text-shadow: 0 0 10px rgba(0, 255, 150, 0.8);
+        margin: 0;
+      }
 
-  .conteiner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-items: center;
-    text-align: center;
-  }
-  .title-card {
-    font-family: "Bitcount Prop Double Ink", system-ui;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0,
-      "CRSV" 0.5,
-      "ELSH" 0,
-      "ELXP" 0,
-      "SZP1" 0,
-      "SZP2" 0,
-      "XPN1" 0,
-      "XPN2" 0,
-      "YPN1" 0,
-      "YPN2" 0;
-  }
+      .welcome-subtitle {
+        font-size: 1.3rem;
+        color: #013017;
+        margin-top: 10px;
+      }
+      .welcome-description {
+        font-size: 1rem;
+        color: #013017;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .about-grid {
+        display: flex;
+        gap: 2rem;
+      }
+      .about-item {
+        background: #161b22;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        color: white;
+        width: 150px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0, 255, 150, 0.05);
+      }
+      .about-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 255, 150, 0.2);
+      }
+      .about-number {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .about-label {
+        font-size: 1rem;
+        margin-top: 5px;
+      }
 
+      @media (max-width: 768px) {
+        .welcome-container {
+          flex-direction: column;
+          padding: 2rem 1rem;
+        }
+        .welcome-title {
+          font-size: 2rem;
+        }
+        .welcome-subtitle {
+          font-size: 1.1rem;
+        }
+        .welcome-description {
+          font-size: 0.9rem;
+        }
+        .about-grid {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .about-item {
+          width: 100%;
+        }
+      }
 
-</style>
+      .team {
+        margin-top: 30px;
+        text-align: left;
+        display: inline-block;
+      }
+
+      .team-list {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+      }
+
+      .team-list li {
+        color: #00ff9c;
+        font-size: 1rem;
+        margin: 5px 0;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      /* delay tipo terminal */
+      .team-list li:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      .team-list li:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .team-list li:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+      .team-list li:nth-child(4) {
+        animation-delay: 2s;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </div>
+</section>
